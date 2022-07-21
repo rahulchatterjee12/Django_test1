@@ -1,0 +1,105 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">My Site</div>
+        <ul class="nav-links">
+            <div class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </div>
+
+    </nav>
+    <div class="bd">
+        <div class="container">
+            <div class="heading">Result</div>
+            
+            <form action="home" method="post">
+                {% csrf_token %}
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Full Name: </span>
+                        <input type="text" placeholder="Enter your name" name="name">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">School Name: </span>
+                        <input type="text" placeholder="Enter your school name" name="school">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Roll Number : </span>
+                        <input type="text" placeholder="Enter your Roll Number" name="rollno">
+                    </div>
+                </div>
+                <div class="circal-form">
+                    <span class="circal-title">Gender</span>
+                    <div class="category">
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                        <input type="radio" name="gender">Other
+                    </div>
+                </div>
+
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Bengali :</span>
+                        <input type="text" placeholder="Enter your marks" name="bengali">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">English:</span>
+                        <input type="text" placeholder="Enter your makrs" name="english">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Mathematic: </span>
+                        <input type="text" placeholder="Enter your marks" name="mathematic">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Physics: </span>
+                        <input type="text" placeholder="Enter your marks" name="physics">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-box">
+                        <span class="details">Chemistry: </span>
+                        <input type="text" placeholder="Enter your marks" name="chemistry">
+                    </div>
+                </div>
+                <div class="card-details" id="pd">
+                    <div class="card-box">
+                        <span class="details">Biology: </span>
+                        <input type="text" placeholder="Enter your marks" name="biology">
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="register">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
